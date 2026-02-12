@@ -1,0 +1,150 @@
+import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { CalendarHeart, ScrollText, Sparkles, Users } from 'lucide-react'
+import { FeaturedIntentCards } from '../components/home/FeaturedIntentCards'
+import { HeroRitualsCarousel } from '../components/home/HeroRitualsCarousel'
+import { OtherServicesSection } from '../components/home/OtherServicesSection'
+import { PastRitualsCarousel } from '../components/home/PastRitualsCarousel'
+
+export const HomePage = () => {
+  const { t } = useTranslation()
+  const featuredRef = useRef<HTMLDivElement | null>(null)
+  const navigate = useNavigate()
+
+  return (
+    <div className="space-y-10 lg:space-y-14">
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center">
+        <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50/80 px-3 py-1.5 text-sm font-medium text-orange-800 shadow-sm"
+          >
+            <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+            <span>10,000+ {t('stats.ritualsCompleted')}</span>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.05 }}
+            className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl"
+          >
+            {t('hero.headline')}
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+            className="max-w-xl text-base leading-relaxed text-slate-700"
+          >
+            {t('hero.subheadline')}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
+            className="flex flex-wrap items-center gap-3"
+          >
+            <button
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-[#FF6B35] via-[#F7931E] to-[#D4AF37] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(249,115,22,0.45)] transition hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              onClick={() =>
+                featuredRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
+              {t('hero.cta')}
+            </button>
+            <button
+              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/70 px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm backdrop-blur hover:bg-slate-50"
+              onClick={() => navigate('/booking')}
+            >
+              {t('hero.secondaryCta')}
+            </button>
+          </motion.div>
+          <div className="mt-6 grid grid-cols-3 gap-2 sm:gap-4 sm:max-w-md">
+            <StatCard label={t('stats.ritualsCompleted')} value="10k+" />
+            <StatCard label={t('stats.verifiedPriests')} value="500+" />
+            <StatCard label={t('stats.citiesServed')} value="40+" />
+          </div>
+        </div>
+
+        <HeroRitualsCarousel />
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
+          {t('home.journeyTitle')}
+        </h2>
+        <div className="grid gap-3 md:grid-cols-3">
+          <HomeQuickNavCard
+            icon={ScrollText}
+            title={t('home.browseRituals')}
+            description={t('home.browseRitualsDesc')}
+            onClick={() => navigate('/rituals')}
+          />
+          <HomeQuickNavCard
+            icon={CalendarHeart}
+            title={t('home.bookRitual')}
+            description={t('home.bookRitualDesc')}
+            onClick={() => navigate('/booking')}
+          />
+          <HomeQuickNavCard
+            icon={Users}
+            title={t('home.meetTeam')}
+            description={t('home.meetTeamDesc')}
+            onClick={() => navigate('/priests')}
+          />
+        </div>
+      </section>
+
+      <div ref={featuredRef}>
+        <FeaturedIntentCards />
+      </div>
+
+      <PastRitualsCarousel />
+
+      <OtherServicesSection />
+    </div>
+  )
+}
+
+const StatCard = ({ label, value }: { label: string; value: string }) => (
+  <motion.div
+    whileHover={{ y: -3, scale: 1.01 }}
+    className="glass-panel flex flex-col gap-1 px-3 py-2 text-left"
+  >
+    <span className="text-sm font-medium text-slate-600">{label}</span>
+    <span className="text-lg font-semibold text-slate-900">{value}</span>
+  </motion.div>
+)
+
+type HomeQuickNavCardProps = {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  title: string
+  description: string
+  onClick: () => void
+}
+
+const HomeQuickNavCard = ({
+  icon: Icon,
+  title,
+  description,
+  onClick
+}: HomeQuickNavCardProps) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className="glass-panel flex w-full items-start gap-3 rounded-2xl px-3.5 py-3 text-left transition hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(15,23,42,0.12)]"
+  >
+    <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-slate-900 text-white">
+      <Icon className="h-4 w-4" aria-hidden="true" />
+    </span>
+    <span className="flex flex-1 flex-col">
+      <span className="text-sm font-semibold text-slate-900">{title}</span>
+      <span className="text-sm text-slate-600">{description}</span>
+    </span>
+  </button>
+)
+

@@ -1,0 +1,122 @@
+{
+  "brand": {
+    "name": "MyFortune",
+    "tagline": "Premium Pooja & Homa rituals, curated for modern devotees."
+  },
+  "nav": {
+    "home": "Home",
+    "rituals": "Rituals",
+    "priests": "Priests",
+    "booking": "Book a Ritual",
+    "dashboard": "My Dashboard",
+    "about": "About & Trust"
+  },
+  "hero": {
+    "headline": "Sacred rituals, performed with perfection.",
+    "subheadline": "Book authentic Pooja and Homa services with verified priests, curated samagri, and complete guidance—at home or in temple.",
+    "cta": "Explore Sacred Rituals",
+    "secondaryCta": "How it works"
+  },
+  "stats": {
+    "ritualsCompleted": "Rituals Completed",
+    "verifiedPriests": "Verified Priests",
+    "citiesServed": "Cities Served"
+  },
+  "language": {
+    "label": "Language",
+    "english": "English",
+    "kannada": "Kannada",
+    "hindi": "Hindi"
+  },
+  "home": {
+    "journeyTitle": "Start your journey",
+    "browseRituals": "Browse all rituals",
+    "browseRitualsDesc": "See every homa and pooja we offer.",
+    "bookRitual": "Book a ritual",
+    "bookRitualDesc": "Guided 5‑step booking with date & priest.",
+    "meetTeam": "Meet our ritual team",
+    "meetTeamDesc": "View verified priests and languages."
+  },
+  "about": {
+    "title": "About MyFortune",
+    "description": "MyFortune exists to bring authentic, scripture-aligned rituals to modern devotees with complete transparency and care. Verified priests, quality samagri, and guided experiences form the core of our promise."
+  },
+  "dashboard": {
+    "title": "My Dashboard",
+    "description": "View upcoming bookings, past rituals, and saved favourites. This area will show personalized content for each devotee."
+  },
+  "priests": {
+    "title": "Ritual performers",
+    "subtitle": "Verified, experienced priests who perform homas, poojas and life ceremonies with full Vedic discipline."
+  },
+  "rituals": {
+    "title": "Ritual Catalog",
+    "subtitle": "Explore homas, poojas, and special ceremonies curated for your occasions.",
+    "searchPlaceholder": "Search rituals..."
+  },
+  "booking": {
+    "title": "Book a Ritual",
+    "subtitle": "A guided, step-by-step flow to choose your ritual, date, priest and preferences.",
+    "kundliTitle": "Kundli matching",
+    "kundliIntro": "We've opened WhatsApp for you. If it didn't open, use the button below to contact us directly.",
+    "kundliNote": "Our team will share Kundli matching details, process and pricing on WhatsApp.",
+    "contactWhatsApp": "Contact on WhatsApp",
+    "steps": {
+      "ritual": "Ritual",
+      "datetime": "Date & time",
+      "details": "Details",
+      "review": "Review"
+    },
+    "back": "Back",
+    "next": "Next",
+    "confirmBooking": "Confirm booking",
+    "bookingConfirmed": "Booking confirmed. We'll review your details and contact you soon on WhatsApp or email.",
+    "selectRitual": "Select your ritual",
+    "chooseRitual": "Choose a ritual…",
+    "preferredDate": "Preferred date",
+    "preferredTime": "Preferred time slot",
+    "chooseTime": "Choose a time…",
+    "wherePerform": "Where should the ritual be performed?",
+    "atHome": "At home",
+    "atTemple": "At temple",
+    "addressDetails": "Address details",
+    "addressPlaceholder": "Flat / house / street",
+    "city": "City",
+    "specialReqs": "Special requirements (optional)",
+    "specialReqsPlaceholder": "Any sankalpa details, gotra, language preferences, etc.",
+    "reviewTitle": "Review your details",
+    "ritualLabel": "Ritual",
+    "datetimeLabel": "Date & time",
+    "locationLabel": "Location",
+    "notSelected": "Not selected",
+    "timeNotSelected": "Time not selected",
+    "addressNotProvided": "Address not provided",
+    "toastTitle": "Booking received",
+    "toastMessage": "We opened WhatsApp and email with your booking. We will get back to you shortly.",
+    "validationSelectRitual": "Please select a ritual",
+    "validationSelectTime": "Select a time",
+    "validationAddress": "Enter address",
+    "validationCity": "Enter city"
+  },
+  "otherServices": {
+    "title": "Other services",
+    "subtitle": "Kundli matching, astrological guidance, and muhurta selection by experienced practitioners.",
+    "items": {
+      "kundli-matching": {
+        "title": "Kundli matching",
+        "description": "Traditional Vedic compatibility analysis for marriage and partnerships. Get detailed gun milan and planetary guidance from experienced astrologers.",
+        "cta": "Get Kundli match"
+      },
+      "guidance": {
+        "title": "Guidance & consultation",
+        "description": "Personalised astrological and ritual guidance—muhurta, remedies, and life decisions. One-on-one sessions with our learned practitioners.",
+        "cta": "Book consultation"
+      },
+      "muhurta": {
+        "title": "Muhurta selection",
+        "description": "Auspicious date and time selection for weddings, griha pravesh, naming ceremonies, and other important life events.",
+        "cta": "Choose muhurta"
+      }
+    }
+  }
+}
