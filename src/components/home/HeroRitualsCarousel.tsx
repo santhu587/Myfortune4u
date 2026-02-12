@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ShieldCheck, Stars } from 'lucide-react'
 
 const slides = [
   {
@@ -81,15 +80,6 @@ export const HeroRitualsCarousel = () => {
 
       {/* Gradient overlay for text readability */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/10" />
-
-      {/* Top badge row */}
-      <div className="absolute left-0 right-0 top-0 flex items-center justify-between p-4">
-        <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-amber-50 backdrop-blur-sm">
-          <Stars className="h-3.5 w-3.5" aria-hidden="true" />
-          Pure Vedic Ritual Flow
-        </span>
-        <ShieldCheck className="h-5 w-5 text-white/90" aria-hidden="true" />
-      </div>
 
       {/* Bottom caption */}
       <div className="absolute inset-x-0 bottom-0 p-5 text-white">

@@ -17,12 +17,12 @@ export const RitualDetailPage = () => {
         <div className="space-y-4">
           {/* Hero image gallery */}
           <div className="glass-panel overflow-hidden">
-            <div className="relative h-56 w-full overflow-hidden sm:h-64">
+            <div className="relative h-56 w-full overflow-hidden bg-slate-100 sm:h-64">
               {ritual.images[0] && (
                 <img
                   src={ritual.images[0]}
                   alt={title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-center"
                 />
               )}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
@@ -42,7 +42,7 @@ export const RitualDetailPage = () => {
                     key={src}
                     src={src}
                     alt={title}
-                    className="h-12 w-16 rounded-lg object-cover"
+                    className="h-12 w-16 rounded-lg object-cover object-center"
                     loading="lazy"
                   />
                 ))}

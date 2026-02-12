@@ -127,6 +127,31 @@ export const rituals: Ritual[] = [
     images: ['/images/past/krishna-deity.png'],
     requirements: ['Baby and parents present', 'Pooja mantap', 'Cradle decoration', 'Fruits and sweets'],
     benefits: ['Graceful naming of the child', 'Health and longevity blessings', 'Family harmony']
+  },
+  {
+    id: 'navagraha-pooja',
+    name: {
+      en: 'Navagraha Pooja',
+      kn: 'ನವಗ್ರಹ ಪೂಜೆ',
+      hi: 'नवग्रह पूजा'
+    },
+    description: {
+      en: 'Worship of the nine planets (Navagrahas) to pacify malefic influences and strengthen favourable planetary positions.',
+      kn: 'ಒಂಬತ್ತು ಗ್ರಹಗಳ (ನವಗ್ರಹ) ಪೂಜೆ—ಅಶುಭ ಪ್ರಭಾವ ಶಮನ ಮತ್ತು ಶುಭ ಗ್ರಹ ಸ್ಥಿತಿ ಬಲಪಡಿಸಲು.',
+      hi: 'नौ ग्रहों (नवग्रह) की पूजा—अशुभ प्रभाव शांत करने और शुभ ग्रह स्थिति मजबूत करने के लिए।'
+    },
+    duration: 90,
+    category: 'pooja',
+    deity: 'navagraha',
+    occasions: ['remedy', 'health', 'general', 'planetary-dosha'],
+    pricing: {
+      basic: 11000,
+      premium: 18000,
+      deluxe: 28000
+    },
+    images: ['/images/past/past-setup.png'],
+    requirements: ['Navagraha idols or yantra', 'Nine types of grains and flowers', 'Oil lamps', 'Incense and camphor'],
+    benefits: ['Planetary peace', 'Reduces dosha effects', 'Health and prosperity']
   }
 ]
 

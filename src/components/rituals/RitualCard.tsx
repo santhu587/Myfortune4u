@@ -29,12 +29,12 @@ export const RitualCard = ({ ritual }: Props) => {
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
       className="group glass-panel flex flex-col overflow-hidden"
     >
-      <div className="relative h-40 overflow-hidden">
+      <div className="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
         {ritual.images[0] && (
           <img
             src={ritual.images[0]}
             alt={title}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
         )}
