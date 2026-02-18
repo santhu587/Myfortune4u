@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet-async'
 import { RitualCard } from '../components/rituals/RitualCard'
 import { CategoryFilter } from '../components/filters/CategoryFilter'
 import { rituals } from '../shared/data/rituals'
@@ -38,6 +39,11 @@ export const RitualsPage = () => {
 
   return (
     <div className="space-y-8">
+      <Helmet>
+        <title>Ritual Catalog – Pooja &amp; Homa | My Fortune 4U</title>
+        <meta name="description" content="Explore homas, poojas and special ceremonies: Griha Pravesh, Satyanarayana Pooja, Navagraha, Vastu Shanti, Ashlesha Bali and more. Book from ₹10,000 onwards." />
+        <link rel="canonical" href="https://www.myfortune4u.com/rituals" />
+      </Helmet>
       <header className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0 flex-1">
           <h1 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl md:text-3xl">

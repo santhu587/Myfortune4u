@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet-async'
 import { rituals } from '../shared/data/rituals'
 import { PriceComparison } from '../components/rituals/PriceComparison'
 
@@ -10,9 +11,16 @@ export const RitualDetailPage = () => {
 
   const title =
     ritual.name[i18n.language as keyof typeof ritual.name] ?? ritual.name.en
+  const description =
+    ritual.description[i18n.language as keyof typeof ritual.description] ?? ritual.description.en
 
   return (
     <div className="space-y-8">
+      <Helmet>
+        <title>{ritual.name.en} | My Fortune 4U</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={`https://www.myfortune4u.com/rituals/${ritual.id}`} />
+      </Helmet>
       <section className="grid gap-6 sm:gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         <div className="space-y-4">
           {/* Hero image gallery - aspect crop for all devices */}

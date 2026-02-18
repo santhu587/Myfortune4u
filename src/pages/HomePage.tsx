@@ -2,11 +2,20 @@ import { motion } from 'framer-motion'
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet-async'
 import { CalendarHeart, ScrollText, Sparkles, Users } from 'lucide-react'
 import { FeaturedIntentCards } from '../components/home/FeaturedIntentCards'
 import { HeroRitualsCarousel } from '../components/home/HeroRitualsCarousel'
 import { OtherServicesSection } from '../components/home/OtherServicesSection'
 import { PastRitualsCarousel } from '../components/home/PastRitualsCarousel'
+
+const ORGANIZATION_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'My Fortune 4U',
+  url: 'https://www.myfortune4u.com',
+  description: 'Book authentic Pooja and Homa rituals with verified pandits. At home or temple.',
+}
 
 export const HomePage = () => {
   const { t } = useTranslation()
@@ -14,6 +23,13 @@ export const HomePage = () => {
   const navigate = useNavigate()
 
   return (
+    <>
+      <Helmet>
+        <title>My Fortune 4U | Pooja &amp; Homa Rituals – Book Verified Pandits</title>
+        <meta name="description" content="Book authentic Pooja and Homa rituals with verified pandits. Griha Pravesh, Satyanarayana Pooja, Navagraha and more. At home or temple." />
+        <link rel="canonical" href="https://www.myfortune4u.com/" />
+        <script type="application/ld+json">{JSON.stringify(ORGANIZATION_JSON_LD)}</script>
+      </Helmet>
     <div className="space-y-10 lg:space-y-14">
       <section className="grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center">
         <div className="space-y-6">
@@ -107,6 +123,7 @@ export const HomePage = () => {
 
       <OtherServicesSection />
     </div>
+    </>
   )
 }
 

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet-async'
 import { BookingWizard } from '../components/booking/BookingWizard'
 
 const WHATSAPP_NUMBER = '917022168488'
@@ -25,6 +26,11 @@ export const BookingPage = () => {
   if (isKundli) {
     return (
       <div className="space-y-6">
+        <Helmet>
+          <title>Kundli Matching | My Fortune 4U</title>
+          <meta name="description" content="Traditional Vedic Kundli matching for marriage and partnerships. Get details and pricing via WhatsApp." />
+          <link rel="canonical" href="https://www.myfortune4u.com/booking?service=kundli" />
+        </Helmet>
         <header className="space-y-2">
           <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             {t('booking.kundliTitle')}
@@ -57,6 +63,11 @@ export const BookingPage = () => {
 
   return (
     <div className="space-y-6">
+      <Helmet>
+        <title>Book a Ritual | My Fortune 4U</title>
+        <meta name="description" content="Book your Pooja or Homa in 5 steps. Choose ritual, date, pandit and preferences. We'll confirm via WhatsApp or email." />
+        <link rel="canonical" href="https://www.myfortune4u.com/booking" />
+      </Helmet>
       <header className="space-y-1">
         <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
           {t('booking.title')}
