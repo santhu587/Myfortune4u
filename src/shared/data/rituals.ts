@@ -172,7 +172,7 @@ export const rituals: Ritual[] = [
       premium: 18000,
       deluxe: 28000
     },
-    images: ['/images/past/past-setup.png'],
+    images: ['/images/rituals/navagraha-pooja.png'],
     requirements: ['Navagraha idols or yantra', 'Nine types of grains and flowers', 'Oil lamps', 'Incense and camphor'],
     benefits: ['Planetary peace', 'Reduces dosha effects', 'Health and prosperity']
   }
