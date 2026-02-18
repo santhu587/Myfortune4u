@@ -19,10 +19,17 @@ const slides: Slide[] = [
     caption: 'Complete samagri, alankara and homa performed for the family at home.'
   },
   {
+    id: 'office-pooja',
+    image: '/images/past/office-pooja.png',
+    title: 'Office Pooja',
+    subtitle: 'Indoor ceremony with deities & offerings',
+    caption: 'Traditional pooja with adorned deities, flowers, fruits and our pandits performing the ceremony.'
+  },
+  {
     id: 'main-priest',
     image: '/images/priests/main-priest-alt.png',
     title: 'Lead ritual performer',
-    subtitle: 'Chief priest in action',
+    subtitle: 'Chief pandit in action',
     caption: 'Guiding families through Mahamrityunjay Jaap, Satyanarayan Puja and more.'
   },
   {
@@ -66,17 +73,22 @@ export const PastRitualsCarousel = () => {
 
       <div className="glass-panel relative overflow-hidden p-3 sm:p-4">
         <div className="grid gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-center">
-          <div className="relative h-60 overflow-hidden rounded-2xl bg-black sm:h-80">
+          <div className="relative aspect-[4/3] w-full min-h-[200px] overflow-hidden rounded-xl bg-black sm:min-h-0 sm:aspect-auto sm:h-80 sm:rounded-2xl">
             <AnimatePresence mode="wait">
               <motion.img
                 key={active.id}
                 src={active.image}
                 alt={active.title}
-                className={`h-full w-full ${
-                  active.id === 'main-priest' || active.id === 'krishna'
+                className={`absolute inset-0 h-full w-full ${
+                  active.id === 'main-priest' || active.id === 'krishna' || active.id === 'office-pooja'
                     ? 'object-contain object-center'
                     : 'object-cover object-center'
                 }`}
+                style={
+                  active.id === 'office-pooja'
+                    ? { objectPosition: '50% 40%' }
+                    : undefined
+                }
                 initial={{ opacity: 0, scale: 1.02 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
@@ -112,7 +124,7 @@ export const PastRitualsCarousel = () => {
                   type="button"
                   onClick={() => goTo('prev')}
                   aria-label="Previous ritual"
-                  className="inline-flex h-7 w-7 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 sm:min-h-0 sm:min-w-0 sm:h-7 sm:w-7"
                 >
                   <ChevronLeft className="h-3.5 w-3.5" />
                 </button>
@@ -120,7 +132,7 @@ export const PastRitualsCarousel = () => {
                   type="button"
                   onClick={() => goTo('next')}
                   aria-label="Next ritual"
-                  className="inline-flex h-7 w-7 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 sm:min-h-0 sm:min-w-0 sm:h-7 sm:w-7"
                 >
                   <ChevronRight className="h-3.5 w-3.5" />
                 </button>

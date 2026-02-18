@@ -7,7 +7,7 @@ const slides = [
     id: 'group',
     image: '/images/priests/group-performers.png',
     title: 'Our ritual performers',
-    subtitle: 'Verified priests and pandits in traditional Vedic discipline'
+    subtitle: 'Verified pandits in traditional Vedic discipline'
   },
   {
     id: 'team',
@@ -19,7 +19,7 @@ const slides = [
     id: 'lead',
     image: '/images/priests/main-priest.png',
     title: 'Lead ritualist',
-    subtitle: 'Chief priest guiding families through sacred ceremonies'
+    subtitle: 'Chief pandit guiding families through sacred ceremonies'
   }
 ]
 
@@ -45,13 +45,13 @@ export const PriestsCarousel = () => {
   return (
     <section className="space-y-3">
       <div className="glass-panel relative overflow-hidden rounded-2xl">
-        <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-slate-100 sm:min-h-[320px]">
+        <div className="relative flex aspect-[16/9] min-h-[200px] w-full items-center justify-center overflow-hidden bg-slate-100 sm:min-h-[280px] sm:aspect-auto sm:h-[320px]">
           <AnimatePresence mode="wait">
             <motion.img
               key={active.id}
               src={active.image}
               alt={active.title}
-              className="h-full max-h-[360px] w-full object-contain object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center sm:object-contain"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
@@ -75,7 +75,7 @@ export const PriestsCarousel = () => {
                 type="button"
                 onClick={() => goTo('prev')}
                 aria-label="Previous"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/30"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 sm:h-8 sm:w-8 sm:min-h-0 sm:min-w-0"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -83,21 +83,21 @@ export const PriestsCarousel = () => {
                 type="button"
                 onClick={() => goTo('next')}
                 aria-label="Next"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/30"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 sm:h-8 sm:w-8 sm:min-h-0 sm:min-w-0"
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
             </div>
           </div>
         </div>
-        <div className="flex justify-center gap-1.5 border-t border-slate-100/80 bg-white/40 px-3 py-2">
+        <div className="flex justify-center gap-2 border-t border-slate-100/80 bg-white/40 px-3 py-2 sm:gap-1.5">
           {slides.map((_, i) => (
             <button
               key={i}
               type="button"
               onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all ${
-                i === index ? 'w-6 bg-amber-500' : 'w-2 bg-slate-300 hover:bg-slate-400'
+              className={`flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full transition-all sm:min-h-0 sm:min-w-0 ${
+                i === index ? 'h-2 w-6 bg-amber-500' : 'h-2 w-2 bg-slate-300 hover:bg-slate-400'
               }`}
               aria-label={`Slide ${i + 1}`}
             />

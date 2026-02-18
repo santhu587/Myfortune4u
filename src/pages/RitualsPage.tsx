@@ -39,7 +39,7 @@ export const RitualsPage = () => {
   return (
     <div className="space-y-8">
       <header className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <h1 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl md:text-3xl">
             {t('rituals.title')}
           </h1>
@@ -47,7 +47,7 @@ export const RitualsPage = () => {
             {t('rituals.subtitle')}
           </p>
         </div>
-        <div className="flex min-w-0 shrink-0 gap-3 sm:w-64">
+        <div className="w-full min-w-0 sm:w-64 sm:shrink-0">
           <input
             type="search"
             placeholder={t('rituals.searchPlaceholder')}
@@ -60,7 +60,7 @@ export const RitualsPage = () => {
 
       <CategoryFilter value={category} onChange={handleCategoryChange} />
 
-      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((ritual) => (
           <RitualCard key={ritual.id} ritual={ritual} />
         ))}

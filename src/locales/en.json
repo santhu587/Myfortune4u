@@ -6,20 +6,20 @@
   "nav": {
     "home": "Home",
     "rituals": "Rituals",
-    "priests": "Priests",
+    "priests": "Pandits",
     "booking": "Book a Ritual",
     "dashboard": "My Dashboard",
     "about": "About & Trust"
   },
   "hero": {
     "headline": "Sacred rituals, performed with perfection.",
-    "subheadline": "Book authentic Pooja and Homa services with verified priests, curated samagri, and complete guidance—at home or in temple.",
+    "subheadline": "Book authentic Pooja and Homa services with verified pandits, curated samagri, and complete guidance—at home or in temple.",
     "cta": "Explore Sacred Rituals",
     "secondaryCta": "How it works"
   },
   "stats": {
     "ritualsCompleted": "Rituals Completed",
-    "verifiedPriests": "Verified Priests",
+    "verifiedPriests": "Verified Pandits",
     "citiesServed": "Cities Served"
   },
   "language": {
@@ -33,13 +33,13 @@
     "browseRituals": "Browse all rituals",
     "browseRitualsDesc": "See every homa and pooja we offer.",
     "bookRitual": "Book a ritual",
-    "bookRitualDesc": "Guided 5‑step booking with date & priest.",
+    "bookRitualDesc": "Guided 5‑step booking with date & pandit.",
     "meetTeam": "Meet our ritual team",
-    "meetTeamDesc": "View verified priests and languages."
+    "meetTeamDesc": "View verified pandits and languages."
   },
   "about": {
     "title": "About MyFortune",
-    "description": "MyFortune exists to bring authentic, scripture-aligned rituals to modern devotees with complete transparency and care. Verified priests, quality samagri, and guided experiences form the core of our promise."
+    "description": "MyFortune exists to bring authentic, scripture-aligned rituals to modern devotees with complete transparency and care. Verified pandits, quality samagri, and guided experiences form the core of our promise."
   },
   "dashboard": {
     "title": "My Dashboard",
@@ -47,7 +47,7 @@
   },
   "priests": {
     "title": "Ritual performers",
-    "subtitle": "Verified, experienced priests who perform homas, poojas and life ceremonies with full Vedic discipline."
+    "subtitle": "Verified, experienced pandits who perform homas, poojas and life ceremonies with full Vedic discipline."
   },
   "rituals": {
     "title": "Ritual Catalog",
@@ -56,7 +56,7 @@
   },
   "booking": {
     "title": "Book a Ritual",
-    "subtitle": "A guided, step-by-step flow to choose your ritual, date, priest and preferences.",
+    "subtitle": "A guided, step-by-step flow to choose your ritual, date, pandit and preferences.",
     "kundliTitle": "Kundli matching",
     "kundliIntro": "We've opened WhatsApp for you. If it didn't open, use the button below to contact us directly.",
     "kundliNote": "Our team will share Kundli matching details, process and pricing on WhatsApp.",

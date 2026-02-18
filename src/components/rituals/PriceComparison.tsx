@@ -34,7 +34,7 @@ export const PriceComparison = ({ pricing }: Props) => {
               ₹{pricing[tier].toLocaleString('en-IN')}
             </span>
             <span className="text-[11px] text-slate-500">
-              Includes samagri, priest dakshina and guidance.
+              Includes samagri, pandit dakshina and guidance.
             </span>
           </motion.div>
         ))}

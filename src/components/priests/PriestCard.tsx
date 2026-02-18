@@ -7,12 +7,12 @@ type Props = {
 
 export const PriestCard = ({ priest }: Props) => {
   return (
-    <article className="glass-panel flex flex-col overflow-hidden">
-      <div className="relative h-60 overflow-hidden sm:h-64">
+    <article className="glass-panel flex flex-col overflow-hidden rounded-2xl">
+      <div className="relative aspect-[3/2] w-full shrink-0 overflow-hidden bg-slate-100 sm:aspect-[4/3]">
         <img
           src={priest.primaryImage}
           alt={priest.name}
-          className="h-full w-full object-cover object-top"
+          className="absolute inset-0 h-full w-full object-cover object-top"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />

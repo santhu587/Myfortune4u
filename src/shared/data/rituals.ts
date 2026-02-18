@@ -26,56 +26,29 @@ export type Ritual = {
 
 export const rituals: Ritual[] = [
   {
-    id: 'ganapathi-homa',
+    id: 'ashlesha-bali-pooja',
     name: {
-      en: 'Ganapathi Homa',
-      kn: 'ಗಣಪತಿ ಹೋಮ',
-      hi: 'गणपति होम'
+      en: 'Ashlesha Bali Pooja',
+      kn: 'ಆಶ್ಲೇಷ ಬಲಿ ಪೂಜೆ',
+      hi: 'आश्लेष बलि पूजा'
     },
     description: {
-      en: 'Sacred fire ritual to Lord Ganesha for new beginnings and removal of obstacles.',
-      kn: 'ಹೊಸ ಆರಂಭ ಮತ್ತು ವಿಘ್ನ ನಿವಾರಣೆಗೆ ಶ್ರೀ ಗಣೇಶನಿಗೆ ಅರ್ಪಣೆಯ ಪವಿತ್ರ ಹೋಮ.',
-      hi: 'नए प्रारंभ और विघ्नों की निवृत्ति के लिए भगवान गणेश को समर्पित पवित्र होम।'
+      en: 'Naga worship and Ashlesha Bali ritual for serpent deities—peace, protection and remedy for Naga dosha.',
+      kn: 'ನಾಗ ದೇವತೆಗಳಿಗೆ ಆಶ್ಲೇಷ ಬಲಿ ಪೂಜೆ—ಶಾಂತಿ, ರಕ್ಷಣೆ ಮತ್ತು ನಾಗ ದೋಷ ಶಮನ.',
+      hi: 'नाग देवताओं की आश्लेष बलि पूजा—शांति, रक्षा और नाग दोष शमन।'
     },
     duration: 120,
-    category: 'homa',
-    deity: 'ganesha',
-    occasions: ['new-beginnings', 'obstacle-removal', 'general'],
-    pricing: {
-      basic: 5000,
-      premium: 8000,
-      deluxe: 12000
-    },
-    // Uses homepage Health & Protection visual
-    images: ['/images/health-protection.png'],
-    requirements: ['Clean puja space', 'Kalasha with water', 'Flowers and fruits'],
-    benefits: ['Removes obstacles', 'Invokes auspiciousness', 'Blessings for new ventures']
-  },
-  {
-    id: 'satyanarayan-pooja',
-    name: {
-      en: 'Satyanarayan Pooja',
-      kn: 'ಸತ್ಯನಾರಾಯಣ ಪೂಜೆ',
-      hi: 'सत्यनारायण पूजा'
-    },
-    description: {
-      en: 'Auspicious pooja to Lord Vishnu for family harmony, prosperity, and gratitude.',
-      kn: 'ಕುಟುಂಬದ ಸಾಮರಸ್ಯ, ಐಶ್ವರ್ಯ ಮತ್ತು ಕೃತಜ್ಞತೆಯಿಗಾಗಿ ಶ್ರೀ ಮಹಾ ವಿಷ್ಣುವಿನ ಸತ್ಯನಾರಾಯಣ ಪೂಜೆ.',
-      hi: 'परिवारिक सौहार्द, समृद्धि और कृतज्ञता के लिए भगवान विष्णु को समर्पित सत्यनारायण पूजा।'
-    },
-    duration: 150,
     category: 'pooja',
-    deity: 'vishnu',
-    occasions: ['general', 'thanksgiving', 'health'],
+    deity: 'naga',
+    occasions: ['remedy', 'naga-dosha', 'general'],
     pricing: {
-      basic: 15000,
-      premium: 30000,
-      deluxe: 50000
+      basic: 10000,
+      premium: 15000,
+      deluxe: 22000
     },
-    // Uses homepage Special Occasions visual
-    images: ['/images/special-occasions.png'],
-    requirements: ['Pooja mantap', 'Panchamrita items', 'Tulsi leaves'],
-    benefits: ['Family harmony', 'Prosperity', 'Fulfilment of wishes']
+    images: ['/images/rituals/ashleshabali-pooja.png'],
+    requirements: ['Clean puja space', 'Naga idol or rangoli', 'Flowers, milk and offerings'],
+    benefits: ['Naga dosha remedy', 'Peace and protection', 'Blessings of serpent deities']
   },
   {
     id: 'griha-pravesh',
@@ -98,9 +71,59 @@ export const rituals: Ritual[] = [
       premium: 60000,
       deluxe: 100000
     },
-    images: ['/images/new-beginnings.png'],
+    images: ['/images/rituals/griha-pravesh.png'],
     requirements: ['New home ready for pooja', 'Kalasha and coconut', 'Navagraha setup', 'Vastu sankalpa items'],
     benefits: ['Blessed start for new home', 'Vastu alignment', 'Protection for residents']
+  },
+  {
+    id: 'vastu-shanti',
+    name: {
+      en: 'Vastu Shanti',
+      kn: 'ವಾಸ್ತು ಶಾಂತಿ',
+      hi: 'वास्तु शांति'
+    },
+    description: {
+      en: 'Vastu Shanti pooja to pacify the site and building, and to invite harmony and prosperity.',
+      kn: 'ಭೂಮಿ ಮತ್ತು ಕಟ್ಟಡ ಶಾಂತಿಗಾಗಿ ವಾಸ್ತು ಶಾಂತಿ ಪೂಜೆ—ಸಾಮರಸ್ಯ ಮತ್ತು ಐಶ್ವರ್ಯಕ್ಕಾಗಿ.',
+      hi: 'भूमि और भवन की शांति के लिए वास्तु शांति पूजा—सामंजस्य और समृद्धि के लिए।'
+    },
+    duration: 150,
+    category: 'special',
+    deity: 'vastu-devata',
+    occasions: ['vastu', 'new-beginnings', 'home'],
+    pricing: {
+      basic: 20000,
+      premium: 45000,
+      deluxe: 80000
+    },
+    images: ['/images/rituals/vastu-shanti.png'],
+    requirements: ['Land or building to be pacified', 'Kalasha', 'Navagraha and Vastu items', 'Grains and flowers'],
+    benefits: ['Site and structure pacified', 'Vastu harmony', 'Prosperity and peace']
+  },
+  {
+    id: 'satyanarayana-pooja',
+    name: {
+      en: 'Satyanarayana Pooja',
+      kn: 'ಸತ್ಯನಾರಾಯಣ ಪೂಜೆ',
+      hi: 'सत्यनारायण पूजा'
+    },
+    description: {
+      en: 'Auspicious pooja to Lord Vishnu for family harmony, prosperity, and gratitude.',
+      kn: 'ಕುಟುಂಬದ ಸಾಮರಸ್ಯ, ಐಶ್ವರ್ಯ ಮತ್ತು ಕೃತಜ್ಞತೆಯಿಗಾಗಿ ಶ್ರೀ ಮಹಾ ವಿಷ್ಣುವಿನ ಸತ್ಯನಾರಾಯಣ ಪೂಜೆ.',
+      hi: 'परिवारिक सौहार्द, समृद्धि और कृतज्ञता के लिए भगवान विष्णु को समर्पित सत्यनारायण पूजा।'
+    },
+    duration: 150,
+    category: 'pooja',
+    deity: 'vishnu',
+    occasions: ['general', 'thanksgiving', 'health'],
+    pricing: {
+      basic: 15000,
+      premium: 30000,
+      deluxe: 50000
+    },
+    images: ['/images/rituals/satyanarayana-pooja.png'],
+    requirements: ['Pooja mantap', 'Panchamrita items', 'Tulsi leaves'],
+    benefits: ['Family harmony', 'Prosperity', 'Fulfilment of wishes']
   },
   {
     id: 'nama-karana',

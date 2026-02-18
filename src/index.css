@@ -21,12 +21,21 @@
     margin: 0;
     min-width: 280px;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
     background: radial-gradient(circle at top, #fff7f0 0, #ffffff 40%, #fafafa 100%);
     color: var(--color-text);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.6;
+  }
+
+  /* Prevent images from overflowing; aspect boxes use object-cover in component */
+  img {
+    display: block;
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -64,5 +73,16 @@
 
   .text-muted {
     color: var(--color-text-muted);
+  }
+
+  /* Touch-friendly minimum tap targets (44px) */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Smooth horizontal scroll on iOS */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
   }
 }

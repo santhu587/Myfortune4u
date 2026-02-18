@@ -13,36 +13,36 @@ export const RitualDetailPage = () => {
 
   return (
     <div className="space-y-8">
-      <section className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+      <section className="grid gap-6 sm:gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         <div className="space-y-4">
-          {/* Hero image gallery */}
-          <div className="glass-panel overflow-hidden">
-            <div className="relative h-56 w-full overflow-hidden bg-slate-100 sm:h-64">
+          {/* Hero image gallery - aspect crop for all devices */}
+          <div className="glass-panel overflow-hidden rounded-2xl">
+            <div className="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
               {ritual.images[0] && (
                 <img
                   src={ritual.images[0]}
                   alt={title}
-                  className="h-full w-full object-cover object-center"
+                  className="absolute inset-0 h-full w-full object-cover object-center"
                 />
               )}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-4">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-amber-100/80">
+              <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-amber-100/80 sm:text-[11px]">
                   Ritual
                 </p>
-                <h1 className="mt-1 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                <h1 className="mt-1 text-xl font-semibold tracking-tight text-white sm:text-2xl md:text-3xl">
                   {title}
                 </h1>
               </div>
             </div>
             {ritual.images.length > 1 && (
-              <div className="flex gap-2 border-t border-white/60 bg-white/60 px-3 py-2">
+              <div className="flex gap-2 overflow-x-auto border-t border-white/60 bg-white/60 px-3 py-2 [-webkit-overflow-scrolling:touch]">
                 {ritual.images.slice(1).map((src) => (
                   <img
                     key={src}
                     src={src}
                     alt={title}
-                    className="h-12 w-16 rounded-lg object-cover object-center"
+                    className="h-12 w-16 shrink-0 rounded-lg object-cover object-center"
                     loading="lazy"
                   />
                 ))}
