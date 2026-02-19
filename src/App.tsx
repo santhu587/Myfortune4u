@@ -1,6 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Github } from 'lucide-react'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
 import { MainNav } from './components/layout/MainNav'
 import { SanskritShlokaCarousel } from './components/home/SanskritShlokaCarousel'
