@@ -19,6 +19,13 @@ const slides = [
     sub: 'Our sacred rituals'
   },
   {
+    id: 'video-ritual',
+    type: 'video' as const,
+    src: '/videos/IMG_2171.MP4',
+    caption: 'Ritual',
+    sub: 'Sacred ceremony'
+  },
+  {
     id: 'satyanarayana-pooja',
     type: 'image' as const,
     image: '/images/carousel/satyanarayana-pooja.png',
@@ -118,7 +125,7 @@ export const HeroRitualsCarousel = () => {
             <motion.video
               ref={videoRef}
               key={active.id}
-              className="absolute left-1/2 top-1/2 min-h-full min-w-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+              className="absolute inset-0 h-full w-full object-contain object-center"
               src={active.src}
               autoPlay
               muted={!videoWithSound}
