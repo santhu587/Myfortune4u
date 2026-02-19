@@ -129,31 +129,6 @@ export const HomePage = () => {
 
       <PastRitualsCarousel />
 
-      <section className="glass-panel overflow-hidden rounded-2xl p-3 sm:p-4">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <div className="space-y-2 sm:w-2/5">
-            <h2 className="text-sm font-semibold text-slate-900 sm:text-base">
-              A glimpse of our rituals
-            </h2>
-            <p className="text-xs text-slate-600 sm:text-sm">
-              Short video from recent poojas and homas performed by our pandits, with full Vedic
-              discipline and traditional setup.
-            </p>
-          </div>
-          <div className="sm:w-3/5">
-            <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
-              <video
-                className="absolute inset-0 h-full w-full object-cover"
-                src="/videos/rituals-overview.mp4"
-                controls
-                muted
-                playsInline
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <OtherServicesSection />
     </div>
     </>

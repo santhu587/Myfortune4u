@@ -65,7 +65,7 @@ export const BookingPage = () => {
     <div className="space-y-6">
       <Helmet>
         <title>Book a Ritual | My Fortune 4U</title>
-        <meta name="description" content="Book your Pooja or Homa in 5 steps. Choose ritual, date, pandit and preferences. We'll confirm via WhatsApp or email." />
+        <meta name="description" content="Book your Pooja or Homa in 5 steps. Choose ritual, date, pandit and preferences. We'll confirm via WhatsApp." />
         <link rel="canonical" href="https://www.myfortune4u.com/booking" />
       </Helmet>
       <header className="space-y-1">

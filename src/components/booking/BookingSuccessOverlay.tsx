@@ -120,7 +120,7 @@ export const BookingSuccessOverlay = ({
               transition={{ delay: 0.45 }}
               className="mt-3 text-base font-medium text-slate-700"
             >
-              We will contact you soon on WhatsApp or email.
+              We will contact you soon on WhatsApp.
             </motion.p>
 
             <motion.p

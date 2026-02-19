@@ -96,16 +96,9 @@ export const BookingWizard = ({ initialRitualId }: BookingWizardProps) => {
       .filter(Boolean)
       .join('\n')
 
-    // WhatsApp
     const whatsappNumber = '917022168488'
     const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messageLines)}`
     window.open(waUrl, '_blank', 'noreferrer')
-
-    // Email
-    const mailto = `mailto:dmkerimath46@gmail.com?subject=${encodeURIComponent(
-      'New MyFortune ritual booking'
-    )}&body=${encodeURIComponent(messageLines)}`
-    window.open(mailto, '_blank', 'noreferrer')
 
     setSubmitted(true)
     setShowSuccessOverlay(true)

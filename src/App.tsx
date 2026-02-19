@@ -1,13 +1,9 @@
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
 import { MainNav } from './components/layout/MainNav'
-import { SanskritShlokaCarousel } from './components/home/SanskritShlokaCarousel'
 
 function App() {
-  const location = useLocation()
-  const isHome = location.pathname === '/'
-
   return (
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-b from-white via-white to-[#faf5ff] text-slate-900">
       <div className="page-padding pt-4 sm:pt-6 lg:pt-8">
@@ -19,12 +15,6 @@ function App() {
             </div>
           </div>
         </header>
-
-        {isHome && (
-          <div className="page-width mb-4 sm:mb-5">
-            <SanskritShlokaCarousel />
-          </div>
-        )}
 
         <main className="page-width mt-4 sm:mt-6 lg:mt-8 pb-10">
           <motion.div
@@ -54,12 +44,6 @@ function App() {
               className="min-h-[44px] min-w-[44px] flex items-center font-medium hover:text-slate-900"
             >
               WhatsApp
-            </a>
-            <a
-              href="mailto:dmkerimath46@gmail.com"
-              className="min-h-[44px] min-w-[44px] flex items-center font-medium hover:text-slate-900"
-            >
-              Email
             </a>
             <a
               href="https://www.instagram.com/madic__saint442k?igsh=dTRqOW43ZnR1a2s3"
