@@ -90,9 +90,17 @@ export const HomePage = () => {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
-          {t('home.journeyTitle')}
-        </h2>
+        <div className="flex justify-start">
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-[#FF6B35] via-[#F7931E] to-[#D4AF37] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(249,115,22,0.45)]"
+            onClick={() =>
+              featuredRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          >
+            {t('home.journeyTitle')}
+          </button>
+        </div>
         <div className="grid gap-3 md:grid-cols-3">
           <HomeQuickNavCard
             icon={ScrollText}
@@ -120,6 +128,31 @@ export const HomePage = () => {
       </div>
 
       <PastRitualsCarousel />
+
+      <section className="glass-panel overflow-hidden rounded-2xl p-3 sm:p-4">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="space-y-2 sm:w-2/5">
+            <h2 className="text-sm font-semibold text-slate-900 sm:text-base">
+              A glimpse of our rituals
+            </h2>
+            <p className="text-xs text-slate-600 sm:text-sm">
+              Short video from recent poojas and homas performed by our pandits, with full Vedic
+              discipline and traditional setup.
+            </p>
+          </div>
+          <div className="sm:w-3/5">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                src="/videos/rituals-overview.mp4"
+                controls
+                muted
+                playsInline
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <OtherServicesSection />
     </div>
@@ -153,14 +186,14 @@ const HomeQuickNavCard = ({
   <button
     type="button"
     onClick={onClick}
-    className="glass-panel flex w-full items-start gap-3 rounded-2xl px-3.5 py-3 text-left transition hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(15,23,42,0.12)]"
+    className="glass-panel flex w-full items-start gap-3 rounded-2xl border border-transparent bg-gradient-to-br from-white via-white to-orange-50 px-3.5 py-3 text-left transition hover:-translate-y-0.5 hover:border-orange-200 hover:shadow-[0_18px_45px_rgba(15,23,42,0.16)]"
   >
-    <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-slate-900 text-white">
+    <span className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#FF6B35] via-[#F7931E] to-[#D4AF37] text-white shadow-sm">
       <Icon className="h-4 w-4" aria-hidden="true" />
     </span>
     <span className="flex flex-1 flex-col">
       <span className="text-sm font-semibold text-slate-900">{title}</span>
-      <span className="text-sm text-slate-600">{description}</span>
+      <span className="text-xs text-slate-600 sm:text-sm">{description}</span>
     </span>
   </button>
 )

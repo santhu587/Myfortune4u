@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { BookOpen, MessageCircle, CalendarCheck } from 'lucide-react'
 
+const WHATSAPP_NUMBER = '917022168488'
+
 const services = [
   {
     id: 'kundli-matching',
@@ -12,18 +14,27 @@ const services = [
   {
     id: 'guidance',
     icon: MessageCircle,
-    path: '/booking?service=guidance'
+    whatsappMessage: 'Hi, I would like to book a consultation with your pandits. Please share details and availability.'
   },
   {
     id: 'muhurta',
     icon: CalendarCheck,
-    path: '/booking?service=muhurta'
+    whatsappMessage: 'Hi, I need Muhurta selection for an upcoming ceremony. Please share details and pricing.'
   }
 ] as const
 
 export const OtherServicesSection = () => {
   const navigate = useNavigate()
   const { t } = useTranslation()
+
+  const handleServiceClick = (item: (typeof services)[number]) => {
+    if ('whatsappMessage' in item && item.whatsappMessage) {
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(item.whatsappMessage)}`
+      window.open(url, '_blank', 'noreferrer')
+    } else if ('path' in item) {
+      navigate(item.path)
+    }
+  }
 
   return (
     <section className="space-y-5">
@@ -62,7 +73,7 @@ export const OtherServicesSection = () => {
                 </p>
                 <button
                   type="button"
-                  onClick={() => navigate(item.path)}
+                  onClick={() => handleServiceClick(item)}
                   className="mt-auto inline-flex w-fit items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50"
                 >
                   {t(ctaKey)}

@@ -73,16 +73,15 @@ function App() {
           </div>
           </div>
           <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-slate-500 sm:justify-start">
-            <span>Design and developed by Santhosh Chandra</span>
+            <span>Crafted with care by Santhosh Chandra</span>
+            <span>·</span>
             <a
-              href="https://github.com/santhu587/Myfortune4u"
+              href="https://santhoshchandra.vercel.app/"
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1 text-slate-500 hover:text-slate-800"
-              aria-label="View source on GitHub"
+              className="font-semibold text-rose-600 hover:text-rose-700"
             >
-              <Github className="h-4 w-4" aria-hidden="true" />
-              <span>GitHub</span>
+              Portfolio ❤️
             </a>
           </p>
         </div>
